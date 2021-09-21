@@ -11,11 +11,11 @@ const Countries = () => {
     }, [])
     return (
         <div>
-            <h2>Countries: {countries.length}</h2>
+            <h2>Gelo Countries: {countries.length}</h2>
             <div className="countries-container">
 
                 {
-                    countries.map(country => <Country country={country}></Country>)
+                    countries.map(country => <Country key={country.alpha2Code} country={country}></Country>)
                 }
             </div>
 
